@@ -1,0 +1,41 @@
+{
+    "model":
+    {
+	"n_cnn_layers": 3,
+	"n_rnn_layers": 5,
+	"rnn_dim": 512,
+	"n_class": 29,
+	"n_features": 128,
+	"stride": 2,
+	"dropout": 0.1,
+	"n_heads": 8, 
+	"type": "gru"
+    },
+    "post_model":
+    {
+	"n_cnn_layers": 3,
+	"n_rnn_layers": 5,
+	"rnn_dim": 512,
+	"n_class": 29,
+	"n_features": 128,
+	"stride": 2,
+	"dropout": 0.1,
+	"n_heads": 8, 
+	"type": "gru"
+    },
+    "data":
+    {
+	"train_url": "train-clean-100",
+	"test_url": "test-clean",
+	"infer_url": "test-clean",
+	"num_infer_sample": 1,
+	"blank_ind": 28
+    },
+    "train":
+    {
+	"learning_rate": 5e-4,
+	"batch_size": 10,
+	"epochs": 10,
+	"anneal_strategy": "linear"
+    }
+}
